@@ -4,9 +4,8 @@
 *.exe
 *.jpg
 *.rar
-node_modules
-
-
+/node_modules/
+/e2e/
 
 /.### OSX ###
 *.DS_Store
