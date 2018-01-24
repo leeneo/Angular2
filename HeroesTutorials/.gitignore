@@ -4,7 +4,7 @@
 *.exe
 *.jpg
 *.rar
-node_modules
+/node_modules
 
 
 
