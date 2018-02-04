@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "module": "es2015",
+    "outDir": "./aot-src",
     "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
