@@ -6,7 +6,7 @@
 *.rar
 /node_modules/
 /e2e/
-
+/dist/
 /.### OSX ###
 *.DS_Store
 .AppleDouble
@@ -79,3 +79,4 @@ jspm_packages
 # Yarn Integrity file
 .yarn-integrity
 /HeroesTutorials/e2e
+/HeroesTutorials/dist
