@@ -4,15 +4,16 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-login',
   template: `
     <div>
-      <input #usernameRef type='text'>
-      <input #passwordRef type='password'>
+      <p><span>用户名：</span><input #usernameRef type='text'></p>
+      <p><span>密　码：</span><input #passwordRef type='password'></p>
       <button (click)='btnClick(usernameRef.value,passwordRef.value)'>Login</button>
 
     </div>
   `,
   styles: [
-    'div{width:50%}',
-    'input{margin-bottom: 10px;float: left}',
+    'div{margin:0 auto;overflow:hidden;text-align:center;}',
+    'input{display: inline-block}',
+    'span{width:20%}',
     'button{}'
   ]
 })
@@ -23,7 +24,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
   btnClick(username, password) {
-    console.log('用户名：' + username + '\npassword:' + password);
+    console.log('用户名：' + username + '\r\npassword:' + password);
   }
 
 }
