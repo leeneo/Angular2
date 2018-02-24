@@ -1,3 +1,5 @@
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryTodoDbService } from './todo/todo-data';
 import { routing } from './app.routes';
 import { AuthService } from './core/auth.service';
 import { HttpModule } from '@angular/http';
@@ -19,6 +21,7 @@ import { TodoComponent } from './todo/todo.component';
     BrowserModule,
     FormsModule,
     HttpModule,
+    InMemoryWebApiModule.forRoot(InMemoryTodoDbService),
     routing
   ],
   providers: [{ provide: 'auth', useClass: AuthService }],
