@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   providers: [TodoService]
 })
 export class TodoComponent implements OnInit {
-  todos: Todo[] = [];
+  todos: Todo[] ;
   desc = '';
   constructor(private service: TodoService) { }
 
