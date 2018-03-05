@@ -3,8 +3,8 @@ import { Component, OnInit, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-login',
-  template: './login.component.html',
-  styles: [`./login.component.css`],
+  templateUrl: './login.component.html',
+  styleUrls: [`./login.component.css`],
   // DI注入方式，直接引用&本地提供；或者通过令牌方式，在构造中引用
   // providers: [AuthService]
 })

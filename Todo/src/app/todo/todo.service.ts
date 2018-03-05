@@ -1,9 +1,10 @@
-import { promise } from 'selenium-webdriver';
 import { Http, Headers } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { UUID } from 'angular2-uuid';
-import { Todo } from './todo.model';
+
 import 'rxjs/add/operator/toPromise';
+
+import { Todo } from './todo.model';
 
 @Injectable()
 export class TodoService {
