@@ -50,6 +50,6 @@ export class TodoComponent implements OnInit {
   }
 
   getTodos(): void {
-    this.service.getTodos().then(todos => this.todos = [...todos]);
+    // this.service.getTodos().then(todos => this.todos = [...todos]);
   }
 }
