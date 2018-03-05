@@ -1,0 +1,26 @@
+.loginWrap {
+    width: 274px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+input {
+    display: inline-block
+}
+
+span {
+    width: 20%
+}
+
+.loginBtn {
+    float: right
+}
+
+input.ng-invalid {
+    outline: 1px solid red
+}
+
+input.ng-valid {
+    outline: 1px solid gold
+}

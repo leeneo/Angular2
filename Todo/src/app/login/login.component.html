@@ -1,0 +1,18 @@
+<div class='loginWrap'>
+  <form #formRef='ngForm' (ngSubmit)='onSubclck(formRef.value)'>
+    <fieldset ngModelGroup='login'>
+      <div *ngIf='usernameRef.errors?.required'>must be required</div>
+      <div *ngIf='usernameRef.errors?.minlength'>minlenght>3</div>
+      <p>
+        <span>用户名：</span>
+        <input name='username' required minlength='3' [(ngModel)]='username' #usernameRef='ngModel' placeholder='请输入用户名' type='text'>
+      </p>
+      <div *ngIf='passwordRef.errors?.required'>must be required</div>
+      <p>
+        <span>密　码：</span>
+        <input name='password' required [(ngModel)]='password' #passwordRef='ngModel' type='password' placeholder='请输入密码'>
+      </p>
+      <button type='submit' class='loginBtn'>Login</button>
+    </fieldset>
+  </form>
+</div>
