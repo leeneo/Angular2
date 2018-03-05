@@ -12,12 +12,14 @@ import { AuthService } from './core/auth.service';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { TodoComponent } from './todo/todo.component';
+import { TodoFooterComponent } from './todo/todo-footer/todo-footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    TodoComponent
+    TodoComponent,
+    TodoFooterComponent
   ],
   imports: [
     BrowserModule,

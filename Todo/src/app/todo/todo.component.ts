@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   providers: [TodoService]
 })
 export class TodoComponent implements OnInit {
-  todos: Todo[] ;
+  todos: Todo[];
   desc = '';
   constructor(private service: TodoService) { }
 
@@ -30,9 +30,10 @@ export class TodoComponent implements OnInit {
     const i = this.todos.indexOf(todo);
     this.service.toggleTodo(todo)
       .then(t => {
-      this.todos = [
-        ...this.todos.slice(0, i), t,
-        ...this.todos.slice(i + 1)];
+        this.todos = [
+          ...this.todos.slice(0, i), t,
+          ...this.todos.slice(i + 1)
+        ];
       });
   }
 
@@ -43,13 +44,12 @@ export class TodoComponent implements OnInit {
       .then(() => {
         this.todos = [
           ...this.todos.slice(0, i),
-          ...this.todos.slice(i + 1)];
+          ...this.todos.slice(i + 1)
+        ];
       });
   }
 
   getTodos(): void {
-    this.service
-      .getTodos()
-      .then(todos => this.todos = [...todos]);
+    this.service.getTodos().then(todos => this.todos = [...todos]);
   }
 }
