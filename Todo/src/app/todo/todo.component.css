@@ -74,7 +74,7 @@ label[for='toggle-all'] {
     border: none; /* Mobile Safari */
 }
 .toggle-all:before {
-    content: '❯';
+    content: '?';
     font-size: 22px;
     color: #e6e6e6;
     padding: 10px 27px 10px 27px;
@@ -157,7 +157,7 @@ label[for='toggle-all'] {
     color: #af5b5e;
 }
 .todo-list li .destroy:after {
-    content: '×';
+    content: '�';
 }
 .todo-list li:hover .destroy {
     display: block;
