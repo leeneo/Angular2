@@ -79,3 +79,5 @@ jspm_packages
 .yarn-integrity
 /HeroesTutorials/e2e
 /HeroesTutorials/dist
+obj
+bin
