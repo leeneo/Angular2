@@ -6,16 +6,18 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './login.component.html',  // 内部模板语法：template:'',
   styleUrls: ['./login.component.css']    // 内部样式集语法：styles:[],
   // DI注入方式，直接引用&本地提供；或者通过令牌方式，在构造中引用
-  // providers: [AuthService]
+  ,providers: [AuthService]
 })
 export class LoginComponent implements OnInit {
 
   username = '';
   password = '';
-  constructor() { }
+  constructor(private service:AuthService) { 
+  }
 
   onClick(username, password) {
-    console.log('username:' + username + "\n"+"password:" + password);
+    // console.log('username:' + username + "\n"+"password:" + password);
+    console.log('auth result is:' + this.service.loginWithCredentials(username,password));
   }
 
   ngOnInit() {
