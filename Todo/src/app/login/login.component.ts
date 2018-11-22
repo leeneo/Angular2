@@ -17,8 +17,8 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubclck(formvalue) {
+  onSubmit(formValue) {
     // console.log(formvalue);
-    console.log('\n' + this.service.loginWithCredentials(formvalue.login.username, formvalue.login.password));
+    console.log('auth result is: ' + this.service.loginWithCredentials(formValue.login.username, formValue.login.password));
   }
 }
