@@ -6,7 +6,7 @@ export class AuthService {
   constructor() { }
 
   loginWithCredentials(username: string, password: string): boolean {
-    if (username === 'xyu') {
+    if (username === 'xyu' && password === '000') {
       return true;
     }
     return false;
