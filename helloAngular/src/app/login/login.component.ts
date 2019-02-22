@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 // import { AuthService } from './../core/auth.service';
 
 @Component({
@@ -6,20 +6,23 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './login.component.html',  // 内部模板语法：template:'',
   styleUrls: ['./login.component.css']    // 内部样式集语法：styles:[],
   // DI注入方式，直接引用&本地提供；或者通过令牌方式，在构造中引用
-  ,providers: [AuthService]
+  // ,providers: [AuthService]
 })
 export class LoginComponent implements OnInit {
 
   username = '';
   password = '';
-  constructor(private service:AuthService) { 
+  constructor(@Inject('auth') private service) {
   }
 
-  onClick(username, password) {
-    // console.log('username:' + username + "\n"+"password:" + password);
-    console.log('auth result is:' + this.service.loginWithCredentials(username,password));
+  // onClick(username, password) {
+  //   // console.log('username:' + username + "\n"+"password:" + password);
+  //   console.log('auth result is:' + this.service.loginWithCredentials(username, password));
+  // }
+  onSubmit(formvalues) {
+    console.log(formvalues.ogin)
+    console.log('auth result is:' + this.service.loginWithCredentials(formvalues.ogin.username, formvalues.ogin.password));
   }
-
   ngOnInit() {
   }
 
