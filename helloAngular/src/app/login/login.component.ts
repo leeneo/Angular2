@@ -26,4 +26,8 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
+  onFocus(username){
+    console.log(username.valueAccessor._elementRef.nativeElement.placeholder)
+    username.valueAccessor._elementRef.nativeElement.placeholder=''
+  }
 }

@@ -3,13 +3,13 @@
   <input #passwordRef type="password" id="password" >
   <button (click)="onClick(usernameRef.value,passwordRef.value)" >Login</button>   -->
   <fieldset ngModelGroup='ogin'>
-    <input type="text" name='username' [(ngModel)]="username" #usernameRef='ngModel' required minlength="3" />
-    {{usernameRef.errors|json}}
+    <input type="text" class="username" name='username' [(ngModel)]="username" #usernameRef='ngModel' required minlength="3" placeholder="请输入用户名" (focus)="onFocus(usernameRef)"/>
+    <!-- {{usernameRef.errors|json}} -->
     <div *ngIf='usernameRef.errors?.required'>此项必填</div>
     <div *ngIf='usernameRef.errors?.minlength'>此少3个字符</div>
-    <input type="password" name='password' [(ngModel)]='password' #passwordRef='ngModel' required />
+    <input type="password" name='password' [(ngModel)]='password' #passwordRef='ngModel' required placeholder="请输入密码"/>
     <div *ngIf='passwordRef.errors?.required'>此项必填</div>
-    <button type='submit'>Submit</button>
+    <button class="btnSub" type='submit'>Submit</button>
   </fieldset>
 </form>
 <!-- (click)="onClick()"，圆括号是说发生此事件时，调用等号后面的表达式或函数;等号后面的onClick()是我们自己定义在LoginComponent中的函数，这个名称你可以随便定成什么，不一定叫onClick() -->
