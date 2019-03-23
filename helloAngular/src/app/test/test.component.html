@@ -1,0 +1,30 @@
+<div id="id" name='name' class="class" #divRef>This is a DIV! </div>
+<p>
+  test works!
+  <!--此div元素放在此处会报‘<P>’关闭标签错误？？？-->
+  <!-- <div id="ddd" name='divn' class="cl" #divRef>This is a DIV! </div> -->
+  <input www='ff  ' data-ss='ss' id='inpID' class="inpClass" name='inpName' type="text" #user>
+</p>
+
+<button class="testBtn" (click)='onClick(user)'>input</button>
+<button class="testBtn" (click)='onClick(user.type)'>input.type</button>
+<button class="testBtn" (click)='onClick(user.value)'>input.value</button>
+<button class="testBtn" (click)='onClick(user.id)'>input.id</button>
+<button class="testBtn" (click)='onClick(user.name)'>input.name</button>
+
+
+<button class="testBtn" (click)='onClick(divRef)'>div</button>
+<button class="testBtn" (click)='onClick(divRef.id)'>div.id</button>
+<button class="testBtn" (click)='onClick(divRef.style)'>div.style</button>
+
+<h2>Test Directive!</h2>
+<div style="border:1px solid #afb;margin:1rem auto" disabled [class.special]="isSpecial">The class binding is special</div>
+<div [ngClass]="currentClasses">This div is initially saveable, unchanged, and special</div>
+<p appHighlight="#fab">Highlight me!</p>
+<div>
+  <input type="radio" name='colors' (click)="color='lightgreen'">Green
+  <input type="radio" name='colors' (click)="color='yellow'">Yellow
+  <input type="radio" name='colors' (click)="color='cyan'">Cyan
+</div>
+<p  [appHighlight]="color" >Highlight without default color!</p>
+<p  [appHighlight]="color" defaultColor='violet'>Highlight within a default color!</p>

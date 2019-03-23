@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './core/auth.service';
 import { routing } from './app.routes';
-import { TodoComponent } from './todo/todo.component'
+import { TodoComponent } from './todo/todo.component';
+import { TestComponent } from './test/test.component';
+import {HighlightDirective} from './dirc/highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    TodoComponent
+    TodoComponent,
+    TestComponent,
+    HighlightDirective
   ],
   imports: [
     HttpModule,
