@@ -1,7 +1,0 @@
-<ul>
-    <pre>&lt;!-- 直接这样调用也是可以的，这里就会将整个数组输出 --&gt;</pre>
-    <app-user-item [person]='names'></app-user-item><br>        
-
-    <pre>&lt;!-- 循环输出单个项目 --></pre>
-    <app-user-item *ngFor='let name of names' [person]='name'></app-user-item>
-</ul>
