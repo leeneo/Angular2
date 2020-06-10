@@ -1,0 +1,8 @@
+<p>test works!</p>
+<div>
+  <input type="text" #username>
+  <input type="text" #password>
+  <input type="text" [(ngModel)]='password2'>
+  <span>{{password2}}</span>
+  <button (click)=onThisClick(username.value,password.value)>TestLogin</button>
+</div>
