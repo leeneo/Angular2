@@ -8,8 +8,12 @@ import { TestComponent } from './test/test.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'todo',
+    redirectTo: 'login',
     pathMatch: 'full'
+  },
+  {
+    path: 'todo',
+    redirectTo: 'todo'
   },
   {
     path: 'login',

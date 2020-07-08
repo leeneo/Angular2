@@ -11,6 +11,8 @@ import { TodoComponent } from './todo/todo.component';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryTodoDbServeice } from './todo/todo.data';
 import { HttpModule } from '@angular/http';
+import { TodoFooterComponent } from './todo/todo-footer/todo-footer.component';
+import { TodoHeaderComponent } from './todo/todo-header/todo-header.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { HttpModule } from '@angular/http';
     LoginComponent,
     TestComponent,
     TodoComponent,
+    TodoFooterComponent,
+    TodoHeaderComponent,
   ],
   imports: [
     BrowserModule,
